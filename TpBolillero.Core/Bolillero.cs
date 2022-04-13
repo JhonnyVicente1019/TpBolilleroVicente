@@ -1,19 +1,35 @@
-﻿namespace TpBolillero.Core;
-public class Bolillero
-{
-    public List<byte> adentro;
-    public List<byte> afuera;
-    public IAzar azar;
-}
-public  Bolillero()
-{
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-}
-public  Bolillero(byte)
+namespace TpBolillero.Core;
 {
+    public class Bolillero : IAzar
+    {
+        private List<byte> adentro {get; set;}
+        private List<byte> afuera;
+        private IAzar azar;
+        public  Bolillero()
+            {
+
+            }
+        public  Bolillero(byte numero)
+            {
+        
+            }
+        private CrearBolillas(byte numero)
+            {
     
+            }
+        public void ReIngresar()
+            {
+
+            }
+        public byte SacarBolilla;
+        public bool Jugar(List<byte>)
+        public long JugarN(List<byte>)
+
+    }
 }
-public CrearBolillas(byte)
-{
-    
-}
+
+

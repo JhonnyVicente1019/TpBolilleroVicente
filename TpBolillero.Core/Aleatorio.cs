@@ -1,7 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace TpBolillero.Core
 {
-    public class Aleatorio
+    public class Aleatorio : IAzar
     {
-        public Random Random;
+        private Random r = new Random();
+        
+        public byte SacarBolilla(List<byte> bol);
+        
+
+        
     }
 }
