@@ -4,13 +4,14 @@ using System.Linq;
 
 namespace TpBolillero.Core
 {
-    public class Aleatorio : IAzar
+    public class Aleatorio 
     {
         private Random r = new Random();
         
-        public byte SacarBolilla(List<byte> bol);
-        
-
-        
+        public byte SacarBolilla(List<byte> bol) 
+        {
+            var Cbyte = Convert.ToByte(r.Next(0,bol.Count));
+            return bol[Cbyte];
+        }    
     }
 }

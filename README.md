@@ -11,13 +11,13 @@
 
 ## Computación 2021
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Asignatura**: Programacion Sobre Redes
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Nombre TP**: Hilos - Simulación de Bolillero
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Apellido y nombre Alumno**: Vicente Colque Jhonny
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**Curso**: 6to 7ma
 
 # Título del Proyecto
 

@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace TpBolillero.Core;
+namespace TpBolillero.Core
 {
-    public class Bolillero : IAzar
+    public class Bolillero 
     {
-        private List<byte> adentro {get; set;}
-        private List<byte> afuera;
-        private IAzar azar;
-        public  Bolillero()
+        private List<byte> Adentro {get; set;}
+        private List<byte> Afuera {get; set;}
+        private IAzar Azar;
+        public Bolillero(IAzar azar)
             {
-
+                Adentro = new List<byte>();
+                Afuera = new List<byte>();
+                azar = Azar;
             }
-        public  Bolillero(byte numero)
-            {
         
-            }
-        private CrearBolillas(byte numero)
+        public  Bolillero(IAzar Azar, byte numeros)
+        => CrearBolillas(numeros);
+            
+        private void CrearBolillas(byte numeros)
             {
     
             }
@@ -25,11 +26,32 @@ namespace TpBolillero.Core;
             {
 
             }
-        public byte SacarBolilla;
-        public bool Jugar(List<byte>)
-        public long JugarN(List<byte>)
+        public byte SacarBolillas()
+        {
+            var bol = Azar.SacarBolilla(Adentro);
+            Adentro.Add(bol);
+            Afuera.Remove(bol);
+            return bol;
+        }
 
+        public bool Jugar(List<byte> bol)
+        => bol.TrueForAll(x => x == SacarBolillas());
+        public long JugarN(List<byte> jugada, int Cantidad)
+            {
+                long Contador = 0;
+                for (int i = 0; i < Cantidad; i ++)
+                {
+                    if (Jugar(jugada))
+                    {
+                        Contador ++;
+                    }
+                }
+                return Contador;
+            }
     }
 }
+
+
+
 
 
