@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TpBolillero.Core
 {
     public class Primero 
