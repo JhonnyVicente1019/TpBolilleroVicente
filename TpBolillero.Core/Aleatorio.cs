@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TpBolillero.Core
 {
-    public class Aleatorio 
+    public class Aleatorio : IAzar
     {
         private Random r = new Random();
         

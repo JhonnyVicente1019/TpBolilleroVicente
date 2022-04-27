@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpBolillero.Core", "TpBolillero.Core\TpBolillero.Core.csproj", "{AFE218D6-586F-4F5E-8F76-B85FF2E36BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpBolillero.Test", "TpBolillero.Test\TpBolillero.Test.csproj", "{A1F0D89B-2595-45E2-B321-DF5F3D5B3CB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFE218D6-586F-4F5E-8F76-B85FF2E36BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE218D6-586F-4F5E-8F76-B85FF2E36BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE218D6-586F-4F5E-8F76-B85FF2E36BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE218D6-586F-4F5E-8F76-B85FF2E36BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F0D89B-2595-45E2-B321-DF5F3D5B3CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F0D89B-2595-45E2-B321-DF5F3D5B3CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F0D89B-2595-45E2-B321-DF5F3D5B3CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F0D89B-2595-45E2-B321-DF5F3D5B3CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

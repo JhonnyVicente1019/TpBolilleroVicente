@@ -5,42 +5,44 @@ namespace TpBolillero.Core
 {
     public class Bolillero 
     {
-        private List<byte> Adentro {get; set;}
-        private List<byte> Afuera {get; set;}
-        private IAzar Azar;
-        public Bolillero(IAzar azar)
-            {
-                Adentro = new List<byte>();
-                Afuera = new List<byte>();
-                azar = Azar;
-            }
+        public List<byte> Adentro {get; set;}
+        public List<byte> Afuera {get; set;}
+        public IAzar Azar;
+        public Bolillero(){}
         
-        public  Bolillero(IAzar Azar, byte numeros)
+        public  Bolillero(byte numeros)
         => CrearBolillas(numeros);
             
         private void CrearBolillas(byte numeros)
-            {
-    
+            { 
+                Adentro = new List<byte>();
+                Afuera = new List<byte>();
+                for (byte bol = 0; bol < numeros; bol ++)
+                {
+                    Adentro.Add(bol);
+                }
             }
         public void ReIngresar()
             {
-
+                Adentro.AddRange(Afuera);
+                Afuera.Clear();
             }
-        public byte SacarBolillas()
+        public byte SacarBolilla()
         {
-            var bol = Azar.SacarBolilla(Adentro);
-            Adentro.Add(bol);
-            Afuera.Remove(bol);
+            byte bol = Azar.SacarBolilla(Adentro);
+            Adentro.Remove(bol);
+            Afuera.Add(bol);
             return bol;
         }
 
         public bool Jugar(List<byte> bol)
-        => bol.TrueForAll(x => x == SacarBolillas());
-        public long JugarN(List<byte> jugada, int Cantidad)
+        => bol.TrueForAll(x => x == SacarBolilla());
+        public long JugarN(List<byte> jugada, long Cantidad)
             {
                 long Contador = 0;
                 for (int i = 0; i < Cantidad; i ++)
                 {
+                    ReIngresar();
                     if (Jugar(jugada))
                     {
                         Contador ++;
