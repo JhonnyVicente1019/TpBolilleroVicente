@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TpBolillero.Core
 {
-    public class Bolillero 
+    public class Bolillero : ICloneable
     {
         public List<byte> Adentro {get; set;}
         public List<byte> Afuera {get; set;}
@@ -50,10 +51,10 @@ namespace TpBolillero.Core
                 }
                 return Contador;
             }
+
+        public object Clone()
+        {
+            return new Bolillero(this);
+        }
     }
 }
-
-
-
-
-
