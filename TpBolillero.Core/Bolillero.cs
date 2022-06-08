@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace TpBolillero.Core
 {
@@ -10,7 +9,11 @@ namespace TpBolillero.Core
         public List<byte> Afuera {get; set;}
         public IAzar Azar;
         public Bolillero(){}
-        
+        private Bolillero(Bolillero original)
+        {
+            Adentro = new List<byte>(original.Adentro);
+            Afuera = new List<byte>(original.Afuera);
+        }
         public  Bolillero(byte numeros)
         => CrearBolillas(numeros);
             

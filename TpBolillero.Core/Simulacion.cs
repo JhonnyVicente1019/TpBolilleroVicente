@@ -19,7 +19,9 @@ namespace TpBolillero.Core
                 var nuevoBolillero = (Bolillero)clon.Clone();
                 tareas[i] = Task.Run(() => SimularSinHilos(clon, jugadas, hilos));
             }
-            var 
+            var division = hilos / cantidad;
+            Task<long>.WaitAll(tareas);
+            return tareas.Sum(x => x.Result);
         }
     }
 }
