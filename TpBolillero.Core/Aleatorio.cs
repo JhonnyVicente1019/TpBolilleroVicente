@@ -10,6 +10,7 @@ namespace TpBolillero.Core
         
         public byte SacarBolilla(List<byte> bol) 
         {
+            int Cantidad = bol.Count;
             var Cbyte = Convert.ToByte(r.Next(0,bol.Count));
             return bol[Cbyte];
         }    

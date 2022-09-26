@@ -14,8 +14,8 @@ namespace TpBolillero.Core
             Adentro = new List<byte>(original.Adentro);
             Afuera = new List<byte>(original.Afuera);
         }
-        public  Bolillero(byte numeros)
-        => CrearBolillas(numeros);
+        public  Bolillero(byte bol)
+        => CrearBolillas(bol);
             
         private void CrearBolillas(byte numeros)
             { 
