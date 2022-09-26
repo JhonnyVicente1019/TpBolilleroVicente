@@ -35,5 +35,19 @@ namespace TpBolillero.Core
             await Task<long>.WhenAll(tareas);
             return tareas.Sum(x => x.Result);
         }
+        public async Task<long> SimularParallelAsync(Bolillero bolillero, List<byte> jugadas, long cantidadSimulacion, long cantidadHilos)
+        {
+            long [] resultado = new long [cantidadSimulacion];
+            await Task.Run(() => 
+                Parallel.For(0, cantidadHilos, 
+                i =>
+                {
+                    var nuevoBolillero = (Bolillero)bolillero.Clone();
+                    resultado [i] = SimularSinHilos(nuevoBolillero, jugadas, cantidadSimulacion / cantidadHilos);
+                }
+                )
+            );
+            return resultado.Sum();
+        }
     }
 }
